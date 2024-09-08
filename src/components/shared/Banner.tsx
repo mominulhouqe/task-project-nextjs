@@ -7,8 +7,8 @@ import banner from "@/assets/banner.png";
 const Banner = () => {
   return (
     <div className={styles.banner_container}>
-      <div className="lg:w-[960px] mx-auto">
-        <div className="flex justify-center items-center">
+      <div className="md:w-[960px] mx-auto p-4">
+        <div className="flex md:flex-row flex-col justify-center items-center">
           <div>
             <motion.div
               initial={{ opacity: 0, y: -20 }}

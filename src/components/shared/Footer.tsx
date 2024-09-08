@@ -1,61 +1,114 @@
-import brandLogo from "@/assets/logo.png";
-import Image from "next/image";
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+
 const Footer = () => {
   return (
-    <footer className="footer footer-center p-16 bg-base-200 text-base-content rounded">
-      <div>
-        <div className="flex items-center">
-          {/* <Image src={brandLogo} width={60} height={60} alt="brand logo" /> */}
-          <p className="text-3xl font-bold ml-3">Blogiz</p>
+    <footer className="bg-[#F9F9FB] py-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+        
+        {/* Logo and Description */}
+        <div>
+          <div className="mb-4">
+            <img src="/logo.png" alt="Logo" className="h-10" /> {/* Replace with your logo */}
+          </div>
+          <p className="text-sm text-gray-600 mb-6">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim.
+          </p>
+          <div className="flex space-x-3">
+            <a href="#" aria-label="Facebook" className="text-gray-500 hover:text-purple-600">
+              <FaFacebookF />
+            </a>
+            <a href="#" aria-label="Twitter" className="text-gray-500 hover:text-purple-600">
+              <FaTwitter />
+            </a>
+            <a href="#" aria-label="Instagram" className="text-gray-500 hover:text-purple-600">
+              <FaInstagram />
+            </a>
+          </div>
         </div>
-        <p className="w-2/3 mt-2 text-gray-400">
-          <i>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC
-          </i>
-        </p>
+        
+        {/* Product Column */}
+        <div>
+          <h4 className="text-lg font-semibold text-gray-800 mb-4">Product</h4>
+          <ul className="space-y-2 text-gray-600">
+            <li><a href="#" className="hover:text-purple-600">Connections</a></li>
+            <li><a href="#" className="hover:text-purple-600">Protocols</a></li>
+            <li><a href="#" className="hover:text-purple-600">Personas</a></li>
+            <li><a href="#" className="hover:text-purple-600">Integrations</a></li>
+            <li><a href="#" className="hover:text-purple-600">Catalog</a></li>
+            <li><a href="#" className="hover:text-purple-600">Pricing</a></li>
+            <li><a href="#" className="hover:text-purple-600">Security</a></li>
+            <li><a href="#" className="hover:text-purple-600">GDPR</a></li>
+          </ul>
+        </div>
+        
+        {/* For Developers Column */}
+        <div>
+          <h4 className="text-lg font-semibold text-gray-800 mb-4">For Developers</h4>
+          <ul className="space-y-2 text-gray-600">
+            <li><a href="#" className="hover:text-purple-600">Docs</a></li>
+            <li><a href="#" className="hover:text-purple-600">API</a></li>
+            <li><a href="#" className="hover:text-purple-600">Open Source</a></li>
+            <li><a href="#" className="hover:text-purple-600">Engineering Team</a></li>
+          </ul>
+        </div>
+        
+        {/* Company Column */}
+        <div>
+          <h4 className="text-lg font-semibold text-gray-800 mb-4">Company</h4>
+          <ul className="space-y-2 text-gray-600">
+            <li><a href="#" className="hover:text-purple-600">Careers</a></li>
+            <li><a href="#" className="hover:text-purple-600">Blog</a></li>
+            <li><a href="#" className="hover:text-purple-600">Press</a></li>
+          </ul>
+        </div>
+        
+        {/* Support Column */}
+        <div>
+          <h4 className="text-lg font-semibold text-gray-800 mb-4">Support</h4>
+          <ul className="space-y-2 text-gray-600">
+            <li><a href="#" className="hover:text-purple-600">Help Center</a></li>
+            <li><a href="#" className="hover:text-purple-600">Contact Us</a></li>
+            <li><a href="#" className="hover:text-purple-600">Security</a></li>
+            <li><a href="#" className="hover:text-purple-600">Bulletins</a></li>
+            <li><a href="#" className="hover:text-purple-600">Documentation</a></li>
+            <li><a href="#" className="hover:text-purple-600">Partner</a></li>
+            <li><a href="#" className="hover:text-purple-600">Portal</a></li>
+          </ul>
+        </div>
+
+        {/* Newsletter Subscription */}
+        <div>
+          <h4 className="text-lg font-semibold text-gray-800 mb-4">Newsletter</h4>
+          <form className="flex space-x-2">
+            <input
+              type="email"
+              placeholder="Email"
+              className="input input-bordered w-full focus:outline-none"
+            />
+            <button className="btn bg-purple-600 text-white hover:bg-purple-700 px-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 10l7-7m0 0l7 7M12 3v18"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
 
-      <nav>
-        <div className="grid grid-flow-col gap-4">
-          <a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              className="fill-current"
-            >
-              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-            </svg>
-          </a>
-          <a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              className="fill-current"
-            >
-              <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-            </svg>
-          </a>
-          <a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              className="fill-current"
-            >
-              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-            </svg>
-          </a>
-        </div>
-      </nav>
-      <aside>
-        <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
-      </aside>
+      {/* Footer Bottom Section */}
+      <div className="text-center mt-8 text-gray-500">
+        <p className="text-sm">© Rahul Rao</p>
+      </div>
     </footer>
   );
 };

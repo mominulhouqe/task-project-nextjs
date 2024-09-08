@@ -1,6 +1,7 @@
 import EnginnerTeam from "@/components/ui/EnginnerTeam";
 import ProductTeam from "@/components/ui/ProductTeam";
 import Quebly from "@/components/ui/Quebly";
+import SignUpForm from "@/components/ui/SignUp";
 import Testmonial from "@/components/ui/Testmonial";
 
 const HomePage = async () => {
@@ -12,6 +13,7 @@ const HomePage = async () => {
       <EnginnerTeam />
     </div>
       <Testmonial />
+      <SignUpForm />
     
    </div>
   );

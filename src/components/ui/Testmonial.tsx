@@ -3,9 +3,10 @@ import profile from "@/assets/Profile.png";
 
 const Testmonial = () => {
   return (
-    <div className="testimonial-container  py-12 flex justify-center items-center">
-      <div className="md:w-[960px] mx-auto flex flex-col items-center text-center space-y-6">
-        <p className="text-gray-700 italic text-lg md:text-xl">
+    <div className="testimonial-container py-12 px-4 flex justify-center items-center bg-gray-50">
+      <div className="md:w-[960px] w-full mx-auto flex flex-col items-center text-center space-y-6">
+        {/* Testimonial Text */}
+        <p className="text-gray-700 italic text-lg md:text-xl leading-relaxed">
           "What I love about Qubly is the easy way we can collaborate even if
           there is a lot of people involved in the process."
         </p>
@@ -28,6 +29,7 @@ const Testmonial = () => {
         {/* Decorative Line */}
         <hr className="w-full border-t-2 border-gray-300 my-5" />
 
+        {/* Decorative SVG (if any, replace with your SVG content) */}
         <div className="w-full flex justify-between gap-4">
           <svg
             width="146"
