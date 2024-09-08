@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className={`mx-auto navbar bg-base-100 bg-transparent lg:w-[960px] fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`mx-auto navbar bg-base-100 bg-transparent lg:w-[960px] sticky top-0 left-0 right-0 z-50  transition-all duration-300 ${
         isScrolled ? "shadow-lg rounded-md backdrop-blur-md bg-opacity-80" : ""
       }`}
     >

@@ -4,7 +4,9 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    margin-top: 10px;
+    /* margin-top: 160px; */
+
+  
     
     /* Clip-path for a custom shape (e.g., a polygon or curve) */
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
