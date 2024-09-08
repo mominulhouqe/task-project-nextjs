@@ -1,7 +1,7 @@
 const Quebly = () => {
   return (
     <div>
-      <div className="lg:w-[960px] mx-auto mt-16">
+      <div className="mt-16">
   
         <div className="flex items-center justify-center">
           <div className="bg-[#F7F1FF] rounded-full inline-block  px-6 py-2 mb-6 ">
