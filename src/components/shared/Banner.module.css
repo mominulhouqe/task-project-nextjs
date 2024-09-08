@@ -1,8 +1,12 @@
-.banner_container{
-    background: url("../../assets/banner-img.png");
-    height: 100vh;
+.banner_container {
+    background: linear-gradient(180deg, #ffffff 0%, #e2f1ff 100%);
+    height: 696px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     margin-top: 10px;
-}
+    
+    /* Clip-path for a custom shape (e.g., a polygon or curve) */
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  }
+  
