@@ -60,10 +60,11 @@ const SignUpForm = () => {
             </div>
          
           </form>
-          <div className="divider my-4">OR</div>
-          <button className="btn w-full btn-outline border-gray-300 hover:bg-gray-100">
-            <FcGoogle className="mr-2" /> Sign in with Google
+      
+          <button className="mx-auto  flex items-center justify-center border border-blue-500  rounded-sm my-4">
+            <FcGoogle className="mr-2 text-2xl " /> <span className="bg-blue-500 px-6 py-2 text-white">Sign in with Google</span>
           </button>
+          <div className="divider my-4"></div>
           <div className="text-center mt-4">
             <p className="text-sm">
               Already have an account?{" "}
