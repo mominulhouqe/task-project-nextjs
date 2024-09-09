@@ -1,103 +1,304 @@
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import copyright from "@/assets/copyright.png";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <footer className="bg-[#F9F9FB] py-10">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
-        
+      <div className="container mx-auto grid grid-cols-2 md:grid-cols-6 gap-8 px-4">
         {/* Logo and Description */}
         <div>
           <div className="mb-4">
-            <img src="/logo.png" alt="Logo" className="h-10" /> {/* Replace with your logo */}
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M24 0V13.716L12 20.573L0 13.715L24 0Z" fill="#431F5A" />
+              <path
+                d="M12.0021 20.572L24.0021 27.429V41.143L12.0021 34.286L0.0020752 27.429V13.714L12.0021 20.572Z"
+                fill="#722ED1"
+              />
+              <path
+                d="M36.0011 34.2859V47.9989L24.0011 41.1429V27.429L36.0011 34.2859Z"
+                fill="#722ED1"
+              />
+              <path
+                d="M24 0V13.714L36 20.57L48 27.426V13.715L24 0Z"
+                fill="#722ED1"
+              />
+              <path
+                d="M47.999 13.714V27.43L35.999 34.287L23.999 27.429L35.999 20.571L47.999 13.714Z"
+                fill="#431F5A"
+              />
+              <path
+                d="M36.0011 34.2859L24.0011 41.1429V27.429L36.0011 34.2859Z"
+                fill="#431F5A"
+              />
+            </svg>
           </div>
           <p className="text-sm text-gray-600 mb-6">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim.
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat ut wisi enim ad minim.
           </p>
           <div className="flex space-x-3">
-            <a href="#" aria-label="Facebook" className="text-gray-500 hover:text-purple-600">
-              <FaFacebookF />
+            <a
+              href="#"
+              aria-label="Facebook"
+              className="text-gray-500 hover:text-purple-600"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.1191 16C15.3533 16 15.5779 15.907 15.7435 15.7414C15.909 15.5758 16.0021 15.3512 16.0021 15.117V0.883C16.0021 0.648814 15.909 0.424219 15.7435 0.258625C15.5779 0.0930301 15.3533 0 15.1191 0L0.885075 0C0.650889 0 0.426295 0.0930301 0.2607 0.258625C0.0951053 0.424219 0.0020752 0.648814 0.0020752 0.883L0.0020752 15.117C0.0020752 15.3512 0.0951053 15.5758 0.2607 15.7414C0.426295 15.907 0.650889 16 0.885075 16H15.1191Z"
+                  fill="#485A96"
+                />
+                <path
+                  d="M11.042 15.9999V9.80692H13.122L13.433 7.39192H11.042V5.84792C11.042 5.14792 11.236 4.67192 12.242 4.67192H13.521V2.51192C12.9023 2.44473 12.2804 2.41135 11.658 2.41192C11.2348 2.38123 10.81 2.44347 10.4134 2.59427C10.0168 2.74507 9.65793 2.98079 9.36201 3.2849C9.06609 3.58901 8.84026 3.95416 8.70034 4.35476C8.56042 4.75535 8.50981 5.1817 8.55204 5.60392V7.38492H6.46704V9.80692H8.55204V16.0069H11.046L11.042 15.9999Z"
+                  fill="white"
+                />
+              </svg>
             </a>
-            <a href="#" aria-label="Twitter" className="text-gray-500 hover:text-purple-600">
-              <FaTwitter />
+            <a
+              href="#"
+              aria-label="Twitter"
+              className="text-gray-500 hover:text-purple-600"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.99902 16C12.4173 16 15.999 12.4183 15.999 8C15.999 3.58172 12.4173 0 7.99902 0C3.58075 0 -0.000976562 3.58172 -0.000976562 8C-0.000976562 12.4183 3.58075 16 7.99902 16Z"
+                  fill="#2DAAE1"
+                />
+                <path
+                  d="M13.097 4.83402C12.7157 5.00301 12.3112 5.11391 11.897 5.16302C12.3338 4.90159 12.6607 4.49044 12.817 4.00602C12.4066 4.24997 11.9574 4.42178 11.489 4.51401C11.2021 4.20803 10.8298 3.99537 10.4204 3.90365C10.0111 3.81193 9.58365 3.84539 9.19357 3.99967C8.8035 4.15396 8.4688 4.42193 8.23296 4.76884C7.99711 5.11574 7.871 5.52553 7.871 5.94501C7.87085 6.10555 7.88897 6.26558 7.925 6.42202C7.09341 6.38036 6.27987 6.1643 5.53719 5.78788C4.7945 5.41145 4.13926 4.88307 3.614 4.23702C3.34671 4.69745 3.26484 5.24239 3.38503 5.76104C3.50521 6.27968 3.81844 6.73308 4.261 7.02901C3.92904 7.01879 3.60433 6.9293 3.314 6.76801V6.79401C3.31391 7.27704 3.48099 7.74523 3.78685 8.11909C4.09271 8.49294 4.51853 8.74943 4.992 8.84502C4.81243 8.89389 4.62711 8.91844 4.44101 8.91802C4.30881 8.91798 4.17689 8.90559 4.047 8.88102C4.18074 9.2965 4.44098 9.65981 4.79132 9.92014C5.14166 10.1805 5.5646 10.3248 6.00101 10.333C5.12312 11.0208 4.00824 11.3322 2.901 11.199C3.79996 11.775 4.83738 12.0985 5.90442 12.1354C6.97145 12.1723 8.02876 11.9213 8.96536 11.4087C9.90197 10.8962 10.6833 10.141 11.2275 9.22242C11.7716 8.30382 12.0585 7.2557 12.058 6.18803C12.058 6.09736 12.056 6.00701 12.052 5.91701C12.4618 5.62086 12.8157 5.25415 13.097 4.83402Z"
+                  fill="white"
+                />
+              </svg>
             </a>
-            <a href="#" aria-label="Instagram" className="text-gray-500 hover:text-purple-600">
-              <FaInstagram />
+            <a
+              href="#"
+              aria-label="Instagram"
+              className="text-gray-500 hover:text-purple-600"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.334 8C5.334 7.47247 5.49044 6.9568 5.78354 6.51819C6.07664 6.07958 6.49323 5.73775 6.98061 5.53592C7.468 5.33409 8.0043 5.28133 8.52167 5.38432C9.03905 5.48731 9.51426 5.74141 9.88721 6.1145C10.2602 6.48759 10.5141 6.96289 10.6169 7.48031C10.7197 7.99772 10.6667 8.534 10.4647 9.02131C10.2627 9.50862 9.9207 9.92508 9.48198 10.218C9.04326 10.5109 8.52752 10.6672 8 10.667C7.29284 10.6667 6.61474 10.3856 6.11479 9.8855C5.61485 9.38537 5.334 8.70716 5.334 8ZM3.892 8C3.892 8.81249 4.13293 9.60673 4.58432 10.2823C5.03572 10.9578 5.6773 11.4844 6.42794 11.7953C7.17858 12.1062 8.00456 12.1876 8.80143 12.0291C9.5983 11.8706 10.3303 11.4793 10.9048 10.9048C11.4793 10.3303 11.8706 9.5983 12.0291 8.80143C12.1876 8.00456 12.1062 7.17858 11.7953 6.42794C11.4844 5.6773 10.9578 5.03572 10.2823 4.58432C9.60673 4.13293 8.81249 3.892 8 3.892C6.91049 3.892 5.8656 4.32481 5.09521 5.09521C4.32481 5.8656 3.892 6.91049 3.892 8ZM11.31 3.729C11.31 3.91887 11.3663 4.10448 11.4718 4.26235C11.5773 4.42022 11.7272 4.54326 11.9026 4.61592C12.078 4.68858 12.2711 4.7076 12.4573 4.67055C12.6435 4.63351 12.8146 4.54208 12.9488 4.40782C13.0831 4.27356 13.1745 4.10251 13.2116 3.91629C13.2486 3.73006 13.2296 3.53704 13.1569 3.36162C13.0843 3.18621 12.9612 3.03628 12.8033 2.93079C12.6455 2.8253 12.4599 2.769 12.27 2.769C12.0154 2.769 11.7712 2.87014 11.5912 3.05018C11.4111 3.23021 11.31 3.47439 11.31 3.729ZM4.768 14.512C4.26056 14.5063 3.75788 14.4133 3.282 14.237C2.93443 14.1081 2.6201 13.9031 2.362 13.637C2.09543 13.3793 1.89035 13.0648 1.762 12.717C1.58565 12.2411 1.49262 11.7385 1.487 11.231C1.448 10.388 1.44 10.131 1.44 7.998C1.44 5.865 1.448 5.609 1.487 4.765C1.49329 4.25761 1.5863 3.75504 1.762 3.279C1.89091 2.93143 2.09591 2.6171 2.362 2.359C2.61966 2.09238 2.93413 1.88729 3.282 1.759C3.75786 1.58265 4.26055 1.48962 4.768 1.484C5.611 1.445 5.868 1.437 8 1.437C10.132 1.437 10.389 1.445 11.233 1.484C11.7404 1.49029 12.243 1.5833 12.719 1.759C13.0667 1.88766 13.3811 2.0927 13.639 2.359C13.9053 2.61692 14.1103 2.93131 14.239 3.279C14.4154 3.75486 14.5084 4.25755 14.514 4.765C14.553 5.609 14.561 5.865 14.561 7.998C14.561 10.131 14.553 10.387 14.514 11.231C14.508 11.7384 14.4149 12.241 14.239 12.717C14.1058 13.062 13.9018 13.3754 13.6402 13.6368C13.3786 13.8983 13.0651 14.102 12.72 14.235C12.2441 14.4114 11.7415 14.5044 11.234 14.51C10.391 14.549 10.134 14.557 8.001 14.557C5.868 14.557 5.612 14.549 4.769 14.51L4.768 14.512ZM4.7 0.048C4.03695 0.0614449 3.38099 0.187228 2.76 0.42C2.2262 0.621021 1.74263 0.936001 1.343 1.343C0.935625 1.74233 0.620587 2.22598 0.42 2.76C0.187265 3.381 0.0614835 4.03696 0.048 4.7C0.009 5.555 0 5.827 0 8C0 10.173 0.009 10.445 0.048 11.3C0.0614642 11.963 0.187247 12.619 0.42 13.24C0.620645 13.774 0.935676 14.2576 1.343 14.657C1.74282 15.0638 2.22633 15.3787 2.76 15.58C3.38165 15.8129 4.03829 15.9387 4.702 15.952C5.555 15.99 5.827 16 8 16C10.173 16 10.445 15.991 11.3 15.952C11.9637 15.9388 12.6204 15.813 13.242 15.58C13.7735 15.3745 14.2563 15.0602 14.6592 14.6572C15.0622 14.2543 15.3765 13.7715 15.582 13.24C15.8153 12.6185 15.9411 11.9618 15.954 11.298C15.99 10.445 16 10.173 16 8C16 5.827 15.991 5.555 15.952 4.7C15.9386 4.03695 15.8128 3.38099 15.58 2.76C15.3787 2.22634 15.0637 1.74284 14.657 1.343C14.2578 0.935898 13.7746 0.62089 13.241 0.42C12.6197 0.186967 11.9634 0.0611776 11.3 0.048C10.446 0.01 10.173 0 8 0C5.827 0 5.555 0.009 4.7 0.048Z"
+                  fill="url(#paint0_radial_5_168)"
+                />
+                <path
+                  d="M5.334 8C5.334 7.47247 5.49044 6.9568 5.78354 6.51819C6.07664 6.07958 6.49323 5.73775 6.98061 5.53592C7.468 5.33409 8.0043 5.28133 8.52167 5.38432C9.03905 5.48731 9.51426 5.74141 9.88721 6.1145C10.2602 6.48759 10.5141 6.96289 10.6169 7.48031C10.7197 7.99772 10.6667 8.534 10.4647 9.02131C10.2627 9.50862 9.9207 9.92508 9.48198 10.218C9.04326 10.5109 8.52752 10.6672 8 10.667C7.29284 10.6667 6.61474 10.3856 6.11479 9.8855C5.61485 9.38537 5.334 8.70716 5.334 8ZM3.892 8C3.892 8.81249 4.13293 9.60673 4.58432 10.2823C5.03572 10.9578 5.6773 11.4844 6.42794 11.7953C7.17858 12.1062 8.00456 12.1876 8.80143 12.0291C9.5983 11.8706 10.3303 11.4793 10.9048 10.9048C11.4793 10.3303 11.8706 9.5983 12.0291 8.80143C12.1876 8.00456 12.1062 7.17858 11.7953 6.42794C11.4844 5.6773 10.9578 5.03572 10.2823 4.58432C9.60673 4.13293 8.81249 3.892 8 3.892C6.91049 3.892 5.8656 4.32481 5.09521 5.09521C4.32481 5.8656 3.892 6.91049 3.892 8ZM11.31 3.729C11.31 3.91887 11.3663 4.10448 11.4718 4.26235C11.5773 4.42022 11.7272 4.54326 11.9026 4.61592C12.078 4.68858 12.2711 4.7076 12.4573 4.67055C12.6435 4.63351 12.8146 4.54208 12.9488 4.40782C13.0831 4.27356 13.1745 4.10251 13.2116 3.91629C13.2486 3.73006 13.2296 3.53704 13.1569 3.36162C13.0843 3.18621 12.9612 3.03628 12.8033 2.93079C12.6455 2.8253 12.4599 2.769 12.27 2.769C12.0154 2.769 11.7712 2.87014 11.5912 3.05018C11.4111 3.23021 11.31 3.47439 11.31 3.729ZM4.768 14.512C4.26056 14.5063 3.75788 14.4133 3.282 14.237C2.93443 14.1081 2.6201 13.9031 2.362 13.637C2.09543 13.3793 1.89035 13.0648 1.762 12.717C1.58565 12.2411 1.49262 11.7385 1.487 11.231C1.448 10.388 1.44 10.131 1.44 7.998C1.44 5.865 1.448 5.609 1.487 4.765C1.49329 4.25761 1.5863 3.75504 1.762 3.279C1.89091 2.93143 2.09591 2.6171 2.362 2.359C2.61966 2.09238 2.93413 1.88729 3.282 1.759C3.75786 1.58265 4.26055 1.48962 4.768 1.484C5.611 1.445 5.868 1.437 8 1.437C10.132 1.437 10.389 1.445 11.233 1.484C11.7404 1.49029 12.243 1.5833 12.719 1.759C13.0667 1.88766 13.3811 2.0927 13.639 2.359C13.9053 2.61692 14.1103 2.93131 14.239 3.279C14.4154 3.75486 14.5084 4.25755 14.514 4.765C14.553 5.609 14.561 5.865 14.561 7.998C14.561 10.131 14.553 10.387 14.514 11.231C14.508 11.7384 14.4149 12.241 14.239 12.717C14.1058 13.062 13.9018 13.3754 13.6402 13.6368C13.3786 13.8983 13.0651 14.102 12.72 14.235C12.2441 14.4114 11.7415 14.5044 11.234 14.51C10.391 14.549 10.134 14.557 8.001 14.557C5.868 14.557 5.612 14.549 4.769 14.51L4.768 14.512ZM4.7 0.048C4.03695 0.0614449 3.38099 0.187228 2.76 0.42C2.2262 0.621021 1.74263 0.936001 1.343 1.343C0.935625 1.74233 0.620587 2.22598 0.42 2.76C0.187265 3.381 0.0614835 4.03696 0.048 4.7C0.009 5.555 0 5.827 0 8C0 10.173 0.009 10.445 0.048 11.3C0.0614642 11.963 0.187247 12.619 0.42 13.24C0.620645 13.774 0.935676 14.2576 1.343 14.657C1.74282 15.0638 2.22633 15.3787 2.76 15.58C3.38165 15.8129 4.03829 15.9387 4.702 15.952C5.555 15.99 5.827 16 8 16C10.173 16 10.445 15.991 11.3 15.952C11.9637 15.9388 12.6204 15.813 13.242 15.58C13.7735 15.3745 14.2563 15.0602 14.6592 14.6572C15.0622 14.2543 15.3765 13.7715 15.582 13.24C15.8153 12.6185 15.9411 11.9618 15.954 11.298C15.99 10.445 16 10.173 16 8C16 5.827 15.991 5.555 15.952 4.7C15.9386 4.03695 15.8128 3.38099 15.58 2.76C15.3787 2.22634 15.0637 1.74284 14.657 1.343C14.2578 0.935898 13.7746 0.62089 13.241 0.42C12.6197 0.186967 11.9634 0.0611776 11.3 0.048C10.446 0.01 10.173 0 8 0C5.827 0 5.555 0.009 4.7 0.048Z"
+                  fill="url(#paint1_radial_5_168)"
+                />
+                <defs>
+                  <radialGradient
+                    id="paint0_radial_5_168"
+                    cx="0"
+                    cy="0"
+                    r="1"
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(2.128 16.08) scale(20.88)"
+                  >
+                    <stop offset="0.09" stop-color="#FA8F21" />
+                    <stop offset="0.78" stop-color="#D82D7E" />
+                  </radialGradient>
+                  <radialGradient
+                    id="paint1_radial_5_168"
+                    cx="0"
+                    cy="0"
+                    r="1"
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(9.696 16.8) scale(16.464)"
+                  >
+                    <stop offset="0.64" stop-color="#8C3AAA" stop-opacity="0" />
+                    <stop offset="1" stop-color="#8C3AAA" />
+                  </radialGradient>
+                </defs>
+              </svg>
             </a>
           </div>
         </div>
-        
+
         {/* Product Column */}
         <div>
           <h4 className="text-lg font-semibold text-gray-800 mb-4">Product</h4>
           <ul className="space-y-2 text-gray-600">
-            <li><a href="#" className="hover:text-purple-600">Connections</a></li>
-            <li><a href="#" className="hover:text-purple-600">Protocols</a></li>
-            <li><a href="#" className="hover:text-purple-600">Personas</a></li>
-            <li><a href="#" className="hover:text-purple-600">Integrations</a></li>
-            <li><a href="#" className="hover:text-purple-600">Catalog</a></li>
-            <li><a href="#" className="hover:text-purple-600">Pricing</a></li>
-            <li><a href="#" className="hover:text-purple-600">Security</a></li>
-            <li><a href="#" className="hover:text-purple-600">GDPR</a></li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Connections
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Protocols
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Personas
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Integrations
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Catalog
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Security
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                GDPR
+              </a>
+            </li>
           </ul>
         </div>
-        
+
         {/* For Developers Column */}
         <div>
-          <h4 className="text-lg font-semibold text-gray-800 mb-4">For Developers</h4>
+          <h4 className="text-lg font-semibold text-gray-800 mb-4">
+            For Developers
+          </h4>
           <ul className="space-y-2 text-gray-600">
-            <li><a href="#" className="hover:text-purple-600">Docs</a></li>
-            <li><a href="#" className="hover:text-purple-600">API</a></li>
-            <li><a href="#" className="hover:text-purple-600">Open Source</a></li>
-            <li><a href="#" className="hover:text-purple-600">Engineering Team</a></li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Docs
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                API
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Open Source
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Engineering Team
+              </a>
+            </li>
           </ul>
         </div>
-        
+
         {/* Company Column */}
         <div>
           <h4 className="text-lg font-semibold text-gray-800 mb-4">Company</h4>
           <ul className="space-y-2 text-gray-600">
-            <li><a href="#" className="hover:text-purple-600">Careers</a></li>
-            <li><a href="#" className="hover:text-purple-600">Blog</a></li>
-            <li><a href="#" className="hover:text-purple-600">Press</a></li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Careers
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Press
+              </a>
+            </li>
           </ul>
         </div>
-        
+
         {/* Support Column */}
         <div>
           <h4 className="text-lg font-semibold text-gray-800 mb-4">Support</h4>
           <ul className="space-y-2 text-gray-600">
-            <li><a href="#" className="hover:text-purple-600">Help Center</a></li>
-            <li><a href="#" className="hover:text-purple-600">Contact Us</a></li>
-            <li><a href="#" className="hover:text-purple-600">Security</a></li>
-            <li><a href="#" className="hover:text-purple-600">Bulletins</a></li>
-            <li><a href="#" className="hover:text-purple-600">Documentation</a></li>
-            <li><a href="#" className="hover:text-purple-600">Partner</a></li>
-            <li><a href="#" className="hover:text-purple-600">Portal</a></li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Help Center
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Security
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Bulletins
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Documentation
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Partner
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-purple-600">
+                Portal
+              </a>
+            </li>
           </ul>
         </div>
 
         {/* Newsletter Subscription */}
         <div>
-          <h4 className="text-lg font-semibold text-gray-800 mb-4">Newsletter</h4>
-          <form className="flex space-x-2">
+          <h4 className="text-lg font-semibold text-gray-800 mb-4">
+            Newsletter
+          </h4>
+          <form className="flex space-x-2 relative">
             <input
               type="email"
               placeholder="Email"
-              className="input input-bordered w-full focus:outline-none"
+              className="input input-bordered border-0 shadow-md w-full focus:outline-none"
             />
-            <button className="btn bg-purple-600 text-white hover:bg-purple-700 px-4">
+            <button className=" absolute top-1/3 right-0 text-white px-4">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="17"
+                viewBox="0 0 21 17"
                 fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M5 10l7-7m0 0l7 7M12 3v18"
+                  d="M20.5294 7.59573L1.30242 0.0402936C1.22397 0.0128242 1.13929 0.00845729 1.05844 0.0277116C0.977586 0.0469658 0.903961 0.0890325 0.846318 0.14891C0.788675 0.208787 0.749439 0.283956 0.733271 0.365483C0.717103 0.44701 0.724686 0.531464 0.755117 0.608807L2.33126 6.27768C2.37685 6.44117 2.4717 6.58664 2.6029 6.69431C2.7341 6.80198 2.89529 6.86661 3.06453 6.87943L16.3638 7.86372C16.4515 7.87079 16.641 7.90756 16.6389 7.99737C16.6367 8.08717 16.4564 8.12889 16.3687 8.13596L3.22928 8.91661C3.05131 8.92679 2.88146 8.99448 2.74527 9.1095C2.60908 9.22453 2.51391 9.38066 2.47409 9.55441L1.04432 15.719C1.01863 15.7966 1.01528 15.8799 1.03465 15.9593C1.05403 16.0387 1.09534 16.1111 1.15389 16.1682C1.21244 16.2253 1.28586 16.2647 1.36576 16.2821C1.44566 16.2994 1.52883 16.2939 1.60577 16.2663L20.5357 8.41244C20.6195 8.38154 20.6918 8.32552 20.7426 8.25204C20.7934 8.17855 20.8203 8.09118 20.8196 8.00185C20.8189 7.91251 20.7906 7.82557 20.7387 7.75289C20.6868 7.6802 20.6137 7.62532 20.5294 7.59573Z"
+                  fill="#722ED1"
                 />
               </svg>
             </button>
@@ -106,8 +307,14 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom Section */}
-      <div className="text-center mt-8 text-gray-500">
-        <p className="text-sm">© Rahul Rao</p>
+      <div className="text-center mt-8 ">
+        <p className="font-bold flex items-center justify-center gap-2">
+          {" "}
+          <span className="text-2xl">Rahul Rao</span>
+          <span>
+            <Image src={copyright} width={30} height={30} alt="copyright" />{" "}
+          </span>
+        </p>
       </div>
     </footer>
   );

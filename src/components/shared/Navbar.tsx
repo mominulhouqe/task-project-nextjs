@@ -120,7 +120,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center">
+          <div className="hidden lg:flex items-center font-semibold">
             <ul className="menu menu-horizontal px-1">
               <li>
                 <Link href="/">About</Link>

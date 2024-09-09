@@ -1,8 +1,9 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import styles from "./Banner.module.css";
 import banner from "@/assets/banner.png";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -48,13 +49,30 @@ const Banner = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              <h1 className="text-5xl font-bold">
+              <h1 className="text-5xl font-bold my-4">
                 Your data with <br /> real-time analytics
               </h1>
-              <p className="text-gray-500">
+              <p className="text-gray-500 mb-8">
                 Harness the potential of Big Data Analytics & Cloud Services{" "}
                 <br /> and become a data-driven organization with Needle tail
               </p>
+
+        
+            <Link
+                href="/"
+                className="border py-3 bg-[#722ED1] border-[#722ED1] text-white rounded-full px-6 mr-7  "
+              >
+                Start Free Trial
+              </Link>
+      
+            <Link
+                href="/"
+                className=" py-3 bg-white  text-[#722ED1] rounded-full px-8 mr-2  "
+              >
+                Learn More
+              </Link>
+      
+
             </motion.div>
           </div>
 
