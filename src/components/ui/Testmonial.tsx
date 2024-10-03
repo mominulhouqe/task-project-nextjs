@@ -7,8 +7,8 @@ const Testmonial = () => {
       <div className="md:w-[960px] w-full mx-auto flex flex-col items-center text-center space-y-6">
         {/* Testimonial Text */}
         <p className="text-gray-700 italic text-lg md:text-xl leading-relaxed">
-          "What I love about Qubly is the easy way we can collaborate even if
-          there is a lot of people involved in the process."
+        &quot;What I love about Qubly is the easy way we can collaborate even if
+          there is a lot of people involved in the process.&quot;
         </p>
 
         {/* Profile Info */}

@@ -4,13 +4,13 @@ import logos from "@/assets/Logos.png";
 import cirle from "@/assets/circle.png";
 
 import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 
 const ProductTeam = () => {
   const controls = useAnimation();
 
   // Animate when the component is in view
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const element = document.querySelector("#product-team");
     if (element) {
       const rect = element.getBoundingClientRect();
@@ -20,8 +20,7 @@ const ProductTeam = () => {
         controls.start({ opacity: 0, y: 100 });
       }
     }
-  };
-
+  }, []);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Check scroll position on mount
